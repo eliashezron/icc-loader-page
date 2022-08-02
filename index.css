@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+body{
+    background-image: url("/BgMainUI1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Orbitron, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px #000;
+    text-align: center;
+}
+.main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.imgvg{
+  display: flex;
+  height: 228px; 
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.imgvg>img{
+  animation: 2s linear 0s 1 normal forwards running mainLogo_1;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  /* max-width: 568px; */
+  height: 100%; 
+}
+@keyframes mainLogo_1 {
+	0% {
+		width: 568px;
+		height: 228px;
+		transform: translateX(0px) translateY(0px);
+	}
+	50% {
+		width: 614px;
+		height: 246px;
+	}
+	100% {
+		width: 568px;
+		height: 228px;
+	}
+}
+.loader{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 62.5%;
+  box-sizing: border-box;
+  height: 5em; 
+  position: relative;
+}.loader>img{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+}
+.progressbar {
+  display: flex;
+  align-items: center;
+	position: absolute;
+  width: calc(var(--width, 0) * 1%);
+  min-width: 3%;
+	max-width: calc(100% - 2em);
+	height: calc(100% - 25px);
+	border-radius: 1.25em;
+	color: white;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+  background-color: #ffcf00;
+  animation: 2s linear 0s 1 normal forwards running _progressBar_loader;
+  transform-box: fill-box;
+}
+@keyframes _progressBar_loader {
+	0% {
+		width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+#mm{
+  color: #fff;
+  font-size: 2.5em;
+  position: absolute;
+  width: 100%;
+  /* margin-top: 15%; */
+  transform: translateY(280%);
+ 
+}
+.textfield{
+  position: absolute;
+  color: #fff;
+  height: 82px;
+  width: 100%;
+  bottom:5%;
+  display: flex;
+  justify-content: center;
+  animation: 2s linear 0s 1 normal forwards running TIPS__YOU_CAN_DO_THIS_OR_DO_THAT_BASE_ON_YOUR_GOAL_IN_LIFE_JUST_DONT_GET_YOURSELF_CAUGHT_IN_ANY_TROUBLE;
+	transform-box: fill-box;
+	transform-origin: 50% 50%
+}
+.textfield>p{
+  font-size: 1.6em;
+  justify-content: center;
+}
+@keyframes TIPS__YOU_CAN_DO_THIS_OR_DO_THAT_BASE_ON_YOUR_GOAL_IN_LIFE_JUST_DONT_GET_YOURSELF_CAUGHT_IN_ANY_TROUBLE {
+	0% {
+		opacity: 1;
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@media only screen and (max-width: 1440px) {
+  #mm{
+    transform: translateY(270%);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .progressbar{
+    left: .5em;
+    max-width: calc(100% - 1em);
+
+  }
+  #mm{
+    /* display: none; */
+    transform: translateY(250%);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .progressbar{
+    border-radius: 1em;
+  }
+  #mm{
+    transform: translateY(280%);
+  }
+  .imgvg{
+    height: 220px; 
+    width: 100%;
+    margin-bottom: 8%;
+  }
+  .textfield>p{
+    font-size: 1.25em;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .progressbar{
+    left: .3em;
+    max-width: calc(100% - .6em);
+
+  }
+  #mm{
+    transform: translateY(260%);
+  }
+  .textfield{
+    margin-bottom: 9%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .progressbar{
+    border-radius: 0.5em;
+    height: calc(100% - 15px);
+    max-width: calc(100% - 0.6em);
+    left: 0.3em;
+  }
+  #mm{
+    margin-top: 37%;
+    font-size: 2em;
+  }
+  .loader{
+    width: 80%;
+    height: 3em;
+  }
+  .imgvg{
+    /* position: absolute; */
+    height: 160px; 
+    margin-bottom: 50%;
+    width: 100%;
+  }
+  .imgvg>img{
+    /* max-width: 330px; */
+    height: 100%; 
+    width: 100%;
+    transform-box: none;
+    transform-origin: none;
+    animation: 2s linear 0s 1 normal forwards running mainLogo_1;
+
+  }
+  @keyframes mainLogo_1 {
+    0% {
+      width: 338px;
+      height: 200px;
+      transform: translateX(0px) translateY(0px);
+    }
+    50% {
+      width: 414px;
+      height: 228px;
+    }
+    100% {
+      width: 338px;
+      height: 200px;
+    }
+  }
+  .textfield>p{
+    padding: 4%;
+    font-size: .8em;
+    justify-content: center;
+  }
+}
